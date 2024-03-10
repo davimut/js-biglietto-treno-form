@@ -10,30 +10,40 @@
     <section class="p-5">
 
     <div class="contrainer">
-     <div class="contrainer">
-    <div class="row ">
-      <div class="col-md-3 bg-primary-subtle p-3 text-primary">
+     <div class="contrainer ">
+    <div class="row rounded-5 ">
+      
+      <div class="col-lg-3 bg-primary-subtle p-3 text-primary">
+        <form>
      <div class="mb-3">
         <label for="km" class="form-label">Inserisci i chilometri da percorrere</label>
-        <input type="text" class="form-control" id="km" placeholder="500 ">
+        <input type="text" class="form-control" id="km" placeholder="500">
       </div>
       <div class="mb-3">
-        <label for="eta" class="form-label">Inserisci la tua età</label>
-        <input type="text" class="form-control" id="eta" placeholder="25">
+        <select name="" id="eta" class="form-control">
+          <option value="minorenne">Minorenne</option>
+          <option value="adulto">Adulto</option>
+          <option value="over">Over 65</option>
+        </select>
+        <!-- <label for="eta" class="form-label">Inserisci la tua età</label> -->
+        <!-- <input type="text" class="form-control" id="eta" placeholder="25">  -->
       </div>
       <div class="mt-5">
+        <!-- button = (submit) -->
         <button id="calcola" class="btn btn-primary"> Calcola</button>
-      </div>
+      </div></form>
     </div>
+  
 
-    <div class="col-md-3 bg-primary-subtle p-3 text-primary">
-      <table class="table ">
+    <div class="col-lg-5 bg-primary-subtle p-5 text-primary ">
+      <div class=" table-responsive-md">
+      <table class="table">
         <thead >
-          <th >Km</th>
-          <th >Eta</th>
-          <th >Prezzo</th>
-          <th>Sconto</th>
-          <th>Totale</th>
+          <th scope="col" >Km</th>
+          <th scope="col">Eta</th>
+          <th scope="col">Prezzo</th>
+          <th scope="col">Sconto</th>
+          <th scope="col">Totale</th>
         </thead>
         <tbody>
           <tr>
@@ -45,6 +55,7 @@
           </tr>
         </tbody>
        </table>
+      </div>
      <div class="card p-4 text fw-bold " id="risultato"><p>Calcolo i tuoi biglietti</p> 
       <p>sconto over 65   40%</p>
       <p>sconto minorenne   20%</p>
