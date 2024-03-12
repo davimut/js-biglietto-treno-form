@@ -16,8 +16,8 @@ const km                        = parseInt(kmInputElement.value)
     // costanti di prezzi base e sconti (calcolo base km per prezzo base)
 const prezzoBase                = 0.21
 const prezzoPerKm               = prezzoBase * km
-const sconto20                  = (prezzoPerKm * 0.2)
-const sconto40                  = (prezzoPerKm * 0.4)
+const sconto20                  = prezzoPerKm * 0.2
+const sconto40                  = prezzoPerKm * 0.4
 
      // stampa elementi in tabella sul dom
 kmElement.innerHTML             = (km)
@@ -37,14 +37,14 @@ if (!isNaN(km) && km > 0 && (!isNaN.prezzoPerKm)) {
     } else {
         totalElement.innerHTML  = ((prezzoPerKm).toFixed(2) + '€')
         scontoElement.innerHTML = ('0%')
-        resultElement.innerHTML = ('non abbiamo applicato nessuno sconto!non essendo minorenne o over 65 il tuo prezzo è   ' + (prezzoPerKm).toFixed(2) + '€')
+        resultElement.innerHTML = ('non abbiamo applicato nessuno sconto! non essendo minorenne o over 65 il tuo prezzo è   ' + (prezzoPerKm).toFixed(2) + '€')
     }
 }
     //ALTRIMENTI nesusn risultato
 else {
     prezzoElement.innerHTML     = ('0€')
     kmElement.innerHTML         = ('0')
-    totalElement.innerHTML      = ('0 €')
+    totalElement.innerHTML      = ('0€')
     scontoElement.innerHTML     = ('0%')
     resultElement.innerHTML     = ('non è stato possibile eseguire il calcolo')
 }
